@@ -10,7 +10,7 @@ import java.util.function.Consumer;
  * Any calculator view must implement these methods to allow the controller and the view to properly
  * work together.
  * 
- * @author Dave Cohen (d.cohen@rhul.ac.uk)
+ * @author Dave Cohen (d.cohen@rhul.ac.uk) modified by Fahad Riaz
  * 
  **/
 public interface ViewInterface {
