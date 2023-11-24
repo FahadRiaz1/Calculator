@@ -1,0 +1,65 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+/* General Styles */
+.root {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 10px;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Specific Styles */
+#inputField, #totalField {
+    -fx-font-size: 16px;
+    -fx-background-color: white;
+    -fx-border-color: #bfbfbf;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+#calcButton {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+#calcButton:hover {
+    -fx-background-color: #1e88e5;
+}
+
+#revPolishCalculatorButton, #infixCalculatorButton {
+    -fx-background-color: #FFC107;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+#revPolishCalculatorButton:selected, #infixCalculatorButton:selected {
+    -fx-background-color: #FF9800;
+    -fx-text-fill: white;
+}
+
+.flow-pane {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #bfbfbf;
+}
+
+.button-bar {
+    -fx-background-color: transparent;
+}
