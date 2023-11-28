@@ -94,5 +94,20 @@ class NumStackTest {
 
   }
   
+  @Test
+  public void numStackShouldHandleManyPushesAndPopsSuccessfully() throws EmptyStackException, BadTypeException {
+    final int totalEntries = 10000;
+
+    for (int i = 0; i < totalEntries; i++) {
+      numStack.push(55.5f);
+    }
+    assertEquals(totalEntries, numStack.size());
+
+    for (int i = 0; i < totalEntries; i++) {
+      numStack.pop();
+    }
+    assertEquals(0, numStack.size());
+  }
+  
 
 }
