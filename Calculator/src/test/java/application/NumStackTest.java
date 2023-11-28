@@ -53,6 +53,20 @@ class NumStackTest {
     assertEquals(100.567f, poppedValue);
   }
   
+  @Test
+  public void popShouldReturnAndRemoveTopEntry() throws EmptyStackException, BadTypeException {
+    numStack.push(5.5f);
+    assertEquals(1, numStack.size());
+
+    numStack.push(3.5f);
+    assertEquals(2, numStack.size());
+
+    float topValue = numStack.pop();
+    assertEquals(1, numStack.size());
+    assertEquals(3.5f, topValue);
+
+
+  }
   
 
 }
