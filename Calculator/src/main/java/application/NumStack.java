@@ -2,14 +2,19 @@ package application;
 
 public class NumStack {
   
-  private Stack numStack;
+  private Stack stack;
   
   public NumStack() {
-    this.numStack = new Stack();
+    this.stack = new Stack();
   }
   
   public int size() {
-    return numStack.size();
+    return stack.size();
+  }
+  
+  public void push(float number) {
+    stack.push(new Entry(number));
+    
   }
 
 }
