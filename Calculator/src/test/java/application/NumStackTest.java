@@ -33,5 +33,16 @@ class NumStackTest {
     assertEquals(1, numStack.size());
 
   }
+  
+  @Test
+  public void numStackSizeShouldIncreaseByTwoAfterTwoPushes() {
+
+    numStack.push(10f);
+    numStack.push(55.5f);
+
+    assertEquals(2, numStack.size());
+  }
+  
+  
 
 }
