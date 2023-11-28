@@ -16,5 +16,11 @@ public class NumStack {
     stack.push(new Entry(number));
     
   }
+  
+  public float pop() throws EmptyStackException, BadTypeException {
+    Entry entry = stack.pop();
+    return entry.getNumber();
+    
+  }
 
 }

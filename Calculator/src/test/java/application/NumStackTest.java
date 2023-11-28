@@ -43,6 +43,16 @@ class NumStackTest {
     assertEquals(2, numStack.size());
   }
   
+  @Test
+  public void numStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedNumber() throws EmptyStackException, BadTypeException {
+    numStack.push(100.567f);
+    assertEquals(1, numStack.size());
+
+    float poppedValue = numStack.pop();
+    assertEquals(0, numStack.size());
+    assertEquals(100.567f, poppedValue);
+  }
+  
   
 
 }
