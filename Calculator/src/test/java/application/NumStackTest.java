@@ -74,5 +74,17 @@ class NumStackTest {
     });
   }
   
+  @Test
+  public void topShouldReturnTopEntryWithoutRemovingIt() throws EmptyStackException, BadTypeException {
+    numStack.push(1.5f);
+    numStack.push(5.3f);
+
+    float topValue = numStack.top();
+    assertEquals(5.3f, topValue);
+    assertEquals(2, numStack.size());
+
+
+  }
+  
 
 }

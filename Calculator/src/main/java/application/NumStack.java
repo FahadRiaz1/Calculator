@@ -22,5 +22,10 @@ public class NumStack {
     return entry.getNumber();
     
   }
+  
+  public float top() throws BadTypeException, EmptyStackException {
+    Entry entry = stack.top();
+    return entry.getNumber();
+  }
 
 }
