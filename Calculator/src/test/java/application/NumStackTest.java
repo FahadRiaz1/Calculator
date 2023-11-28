@@ -83,6 +83,14 @@ class NumStackTest {
     assertEquals(5.3f, topValue);
     assertEquals(2, numStack.size());
 
+  }
+  
+  @Test
+  public void testTopMethodOnEmptyStack() {
+    assertEquals(0, numStack.size());
+    assertThrows(EmptyStackException.class, () -> {
+      numStack.top();
+    });
 
   }
   
