@@ -64,8 +64,14 @@ class NumStackTest {
     float topValue = numStack.pop();
     assertEquals(1, numStack.size());
     assertEquals(3.5f, topValue);
-
-
+  }
+  
+  @Test
+  public void testPopMethodOnEmptyNumStack() {
+    assertEquals(0, numStack.size());
+    assertThrows(EmptyStackException.class, () -> {
+      numStack.pop();
+    });
   }
   
 
