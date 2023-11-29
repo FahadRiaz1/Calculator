@@ -52,6 +52,19 @@ private OpStack opStack;
     assertEquals(0, opStack.size());
     assertEquals(Symbol.MINUS, poppedSymbol);
   }
+  
+  @Test
+  public void popShouldReturnAndRemoveTopEntry() throws EmptyStackException, BadTypeException {
+    opStack.push(Symbol.DIVIDE);
+    assertEquals(1, opStack.size());
+
+    opStack.push(Symbol.LEFT_BRACKET);
+    assertEquals(2, opStack.size());
+
+    Symbol topSymbol = opStack.pop();
+    assertEquals(1, opStack.size());
+    assertEquals(Symbol.LEFT_BRACKET, topSymbol);
+  }
 
 
 
