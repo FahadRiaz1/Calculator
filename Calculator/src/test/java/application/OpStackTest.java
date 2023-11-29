@@ -26,6 +26,13 @@ private OpStack opStack;
     assertEquals(0, opStack.size());
 
   }
+  
+  @Test
+  public void opStackSizeShouldIncreaseByOneAfterSinglePush() {
+    opStack.push(Symbol.PLUS);
+    assertEquals(1, opStack.size());
+
+  }
 
 
 
