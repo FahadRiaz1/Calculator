@@ -22,5 +22,10 @@ public class OpStack {
     return entry.getSymbol();
     
   }
+  
+  public Symbol top() throws BadTypeException, EmptyStackException {
+    Entry entry = stack.top();
+    return entry.getSymbol();
+  }
 
 }

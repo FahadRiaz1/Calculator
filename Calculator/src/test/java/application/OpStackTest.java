@@ -73,6 +73,17 @@ private OpStack opStack;
       opStack.pop();
     });
   }
+  
+  @Test
+  public void topShouldReturnTopEntryWithoutRemovingIt() throws EmptyStackException, BadTypeException {
+    opStack.push(Symbol.DIVIDE);
+    opStack.push(Symbol.RIGHT_BRACKET);
+
+    Symbol topValue = opStack.top();
+    assertEquals(Symbol.RIGHT_BRACKET, topValue);
+    assertEquals(2, opStack.size());
+
+  }
 
 
 
