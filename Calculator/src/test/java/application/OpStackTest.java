@@ -93,6 +93,21 @@ private OpStack opStack;
     });
 
   }
+  
+  @Test
+  public void opStackShouldHandleManyPushesAndPopsSuccessfully() throws EmptyStackException, BadTypeException {
+    final int totalEntries = 10000;
+
+    for (int i = 0; i < totalEntries; i++) {
+      opStack.push(Symbol.PLUS);
+    }
+    assertEquals(totalEntries, opStack.size());
+
+    for (int i = 0; i < totalEntries; i++) {
+      opStack.pop();
+    }
+    assertEquals(0, opStack.size());
+  }
 
 
 
