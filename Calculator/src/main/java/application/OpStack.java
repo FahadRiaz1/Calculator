@@ -7,5 +7,9 @@ public class OpStack {
   public OpStack() {
     this.stack = new Stack();
   }
+  
+  public int size() {
+    return stack.size();
+  }
 
 }

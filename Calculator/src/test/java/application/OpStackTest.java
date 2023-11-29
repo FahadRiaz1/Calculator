@@ -20,6 +20,12 @@ private OpStack opStack;
     assertNotNull(opStack);
 
   }
+  
+  @Test
+  public void opStackShouldHaveSizeZeroUponInitialization() {
+    assertEquals(0, opStack.size());
+
+  }
 
 
 
