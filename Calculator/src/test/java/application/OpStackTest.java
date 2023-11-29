@@ -42,6 +42,16 @@ private OpStack opStack;
 
     assertEquals(2, opStack.size());
   }
+  
+  @Test
+  public void opStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedSymbol() throws EmptyStackException, BadTypeException {
+    opStack.push(Symbol.MINUS);
+    assertEquals(1, opStack.size());
+
+    Symbol poppedSymbol = opStack.pop();
+    assertEquals(0, opStack.size());
+    assertEquals(Symbol.MINUS, poppedSymbol);
+  }
 
 
 

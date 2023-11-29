@@ -16,5 +16,11 @@ public class OpStack {
     stack.push(new Entry(symbol));
     
   }
+  
+  public Symbol pop() throws EmptyStackException, BadTypeException {
+    Entry entry = stack.pop();
+    return entry.getSymbol();
+    
+  }
 
 }
