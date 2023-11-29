@@ -159,6 +159,7 @@
 					<archive>
 						<manifest>
 							<mainClass>application.Driver</mainClass>
+							<executable>true</executable>
 						</manifest>
 					</archive>
 				</configuration>
