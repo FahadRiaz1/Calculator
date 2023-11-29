@@ -1,4 +1,8 @@
-v1.0:
+v1.0: (Release 1)
 
 + Added GUI for the Calculator
 + Improved the GUI by adding CSS
+
+v1.0.1: (Release 1)
+
++ Fixed a bug in the GUI where the "Answer" field was editable by the user 
