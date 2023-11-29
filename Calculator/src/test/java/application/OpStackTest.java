@@ -84,6 +84,15 @@ private OpStack opStack;
     assertEquals(2, opStack.size());
 
   }
+  
+  @Test
+  public void testTopMethodOnEmptyOpStack() {
+    assertEquals(0, opStack.size());
+    assertThrows(EmptyStackException.class, () -> {
+      opStack.top();
+    });
+
+  }
 
 
 
