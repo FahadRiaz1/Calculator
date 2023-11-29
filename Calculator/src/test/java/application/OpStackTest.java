@@ -33,6 +33,15 @@ private OpStack opStack;
     assertEquals(1, opStack.size());
 
   }
+  
+  @Test
+  public void opStackSizeShouldIncreaseByTwoAfterTwoPushes() {
+
+    opStack.push(Symbol.DIVIDE);
+    opStack.push(Symbol.MULTIPLY);
+
+    assertEquals(2, opStack.size());
+  }
 
 
 
