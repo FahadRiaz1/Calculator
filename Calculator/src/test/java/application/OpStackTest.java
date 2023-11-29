@@ -65,6 +65,14 @@ private OpStack opStack;
     assertEquals(1, opStack.size());
     assertEquals(Symbol.LEFT_BRACKET, topSymbol);
   }
+  
+  @Test
+  public void testPopMethodOnEmptyOpStack() {
+    assertEquals(0, opStack.size());
+    assertThrows(EmptyStackException.class, () -> {
+      opStack.pop();
+    });
+  }
 
 
 
