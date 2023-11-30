@@ -33,6 +33,15 @@ private StrStack strStack;
     assertEquals(1, strStack.size());
 
   }
+  
+  @Test
+  public void strStackSizeShouldIncreaseByTwoAfterTwoPushes() {
+
+    strStack.push("5 + 5");
+    strStack.push("5 5 +");
+
+    assertEquals(2, strStack.size());
+  }
 
  
 
