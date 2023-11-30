@@ -76,6 +76,21 @@ private StrStack strStack;
     assertEquals(2, strStack.size());
 
   }
+  
+  @Test
+  public void strStackShouldHandleManyPushesAndPopsSuccessfully() throws EmptyStackException, BadTypeException {
+    final int totalEntries = 10000;
+
+    for (int i = 0; i < totalEntries; i++) {
+      strStack.push("5 + 10 + 15");
+    }
+    assertEquals(totalEntries, strStack.size());
+
+    for (int i = 0; i < totalEntries; i++) {
+      strStack.pop();
+    }
+    assertEquals(0, strStack.size());
+  }
 
  
 
