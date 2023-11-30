@@ -52,6 +52,19 @@ private StrStack strStack;
     assertEquals(0, strStack.size());
     assertEquals("testing", poppedString);
   }
+  
+  @Test
+  public void popShouldReturnAndRemoveTopEntry() throws EmptyStackException, BadTypeException {
+    strStack.push("hello");
+    assertEquals(1, strStack.size());
+
+    strStack.push("hi");
+    assertEquals(2, strStack.size());
+
+    String topString = strStack.pop();
+    assertEquals(1, strStack.size());
+    assertEquals("hi", topString);
+  }
 
  
 
