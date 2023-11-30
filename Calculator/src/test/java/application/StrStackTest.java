@@ -20,6 +20,12 @@ private StrStack strStack;
     assertNotNull(strStack);
 
   }
+  
+  @Test
+  public void strStackShouldHaveSizeZeroUponInitialization() {
+    assertEquals(0, strStack.size());
+
+  }
 
  
 

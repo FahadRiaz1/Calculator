@@ -11,5 +11,9 @@ public class StrStack {
   public StrStack() {
     this.stack = new Stack();
   }
+  
+  public int size() {
+    return stack.size();
+  }
 
 }
