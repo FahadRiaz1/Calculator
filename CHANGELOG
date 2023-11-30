@@ -6,3 +6,7 @@ v1.0: (Release 1)
 v1.0.1: (Release 1)
 
 + Fixed a bug in the GUI where the "Answer" field was editable by the user 
+
+v1.1: (Release 1)
+
++ Implemented all the stacks that will work in the backend
