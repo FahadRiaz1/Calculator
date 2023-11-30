@@ -15,5 +15,10 @@ public class StrStack {
   public int size() {
     return stack.size();
   }
+  
+  public void push(String string) {
+    stack.push(new Entry(string));
+    
+  }
 
 }

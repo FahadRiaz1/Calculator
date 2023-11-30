@@ -26,6 +26,13 @@ private StrStack strStack;
     assertEquals(0, strStack.size());
 
   }
+  
+  @Test
+  public void strStackSizeShouldIncreaseByOneAfterSinglePush() {
+    strStack.push("test");
+    assertEquals(1, strStack.size());
+
+  }
 
  
 
