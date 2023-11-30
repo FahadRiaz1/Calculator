@@ -65,6 +65,17 @@ private StrStack strStack;
     assertEquals(1, strStack.size());
     assertEquals("hi", topString);
   }
+  
+  @Test
+  public void topShouldReturnTopEntryWithoutRemovingIt() throws EmptyStackException, BadTypeException {
+    strStack.push("1");
+    strStack.push("2");
+
+    String topValue = strStack.top();
+    assertEquals("2", topValue);
+    assertEquals(2, strStack.size());
+
+  }
 
  
 

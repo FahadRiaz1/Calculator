@@ -26,5 +26,10 @@ public class StrStack {
     return entry.getString();
     
   }
+  
+  public String top() throws BadTypeException, EmptyStackException {
+    Entry entry = stack.top();
+    return entry.getString();
+  }
 
 }
