@@ -20,5 +20,11 @@ public class StrStack {
     stack.push(new Entry(string));
     
   }
+  
+  public String pop() throws EmptyStackException, BadTypeException {
+    Entry entry = stack.pop();
+    return entry.getString();
+    
+  }
 
 }

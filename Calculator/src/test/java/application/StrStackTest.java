@@ -42,6 +42,16 @@ private StrStack strStack;
 
     assertEquals(2, strStack.size());
   }
+  
+  @Test
+  public void strStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedString() throws EmptyStackException, BadTypeException {
+    strStack.push("testing");
+    assertEquals(1, strStack.size());
+
+    String poppedString = strStack.pop();
+    assertEquals(0, strStack.size());
+    assertEquals("testing", poppedString);
+  }
 
  
 
