@@ -31,5 +31,11 @@ class RevPolishCalcTest {
     assertEquals(1.0f, rpnCalc.evaluate("6 5 -"));
 
   }
+  
+  @Test
+  public void testSimpleMultiplication() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(25.0f, rpnCalc.evaluate("5 5 *"));
+
+  }
 
 }
