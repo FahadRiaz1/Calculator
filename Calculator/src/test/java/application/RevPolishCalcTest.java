@@ -37,5 +37,11 @@ class RevPolishCalcTest {
     assertEquals(25.0f, rpnCalc.evaluate("5 5 *"));
 
   }
+  
+  @Test
+  public void testSimpleDivision() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(7.0f, rpnCalc.evaluate("35 5 /"));
+
+  }
 
 }
