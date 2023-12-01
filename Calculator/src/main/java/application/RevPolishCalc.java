@@ -45,6 +45,9 @@ public class RevPolishCalc {
       case "+":
         return operand1 + operand2;
         
+      case "-":
+        return operand1 - operand2;
+        
       default:
         throw new IllegalArgumentException("Invalid operator: " + token);
     }

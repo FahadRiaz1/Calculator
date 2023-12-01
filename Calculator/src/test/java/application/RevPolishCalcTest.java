@@ -25,5 +25,11 @@ class RevPolishCalcTest {
     assertEquals(11.0f, rpnCalc.evaluate("5 6 +"));
 
   }
+  
+  @Test
+  public void testSimpleSubtraction() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(1.0f, rpnCalc.evaluate("6 5 -"));
+
+  }
 
 }
