@@ -19,5 +19,11 @@ class RevPolishCalcTest {
     assertNotNull(rpnCalc);
 
   }
+  
+  @Test
+  public void testSimpleAddition() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(11.0f, rpnCalc.evaluate("5 6 +"));
+
+  }
 
 }
