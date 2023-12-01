@@ -85,5 +85,14 @@ class RevPolishCalcTest {
     });
 
   }
+  
+  @Test
+  public void testEvaluateOnInsufficientOperands() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertThrows(InvalidExpression.class, () -> {
+      rpnCalc.evaluate("5 +");
+      
+    });
+
+  }
 
 }
