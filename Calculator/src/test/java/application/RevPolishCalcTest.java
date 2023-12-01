@@ -43,5 +43,11 @@ class RevPolishCalcTest {
     assertEquals(7.0f, rpnCalc.evaluate("35 5 /"));
 
   }
+  
+  @Test
+  public void testDivisionByZero() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertThrows(IllegalArgumentException.class, () -> rpnCalc.evaluate("4 0 /"));
+
+  }
 
 }
