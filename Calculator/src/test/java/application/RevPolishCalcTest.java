@@ -76,5 +76,14 @@ class RevPolishCalcTest {
     });
 
   }
+  
+  @Test
+  public void testEvaluateMethodOnInvalidToken() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertThrows(InvalidExpression.class, () -> {
+      rpnCalc.evaluate("5 2 $");
+      
+    });
+
+  }
 
 }

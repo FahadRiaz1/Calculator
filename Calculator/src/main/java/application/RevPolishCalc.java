@@ -22,9 +22,18 @@ public class RevPolishCalc {
     for (String token : tokens) {
       if (isNumber(token)) {
         numStack.push(Float.parseFloat(token));
-      } else {
+      } else if (isOperator(token)) {
+        
+        if (numStack.size() < 2) {
+          throw new InvalidExpression("Insufficient operands.");
+        }
+        
+        
         float answer = applyOperation(token);
         numStack.push(answer);
+        
+      } else {
+        throw new InvalidExpression("Invalid expression due to invalid operators");
       }
     }
     
@@ -39,6 +48,12 @@ public class RevPolishCalc {
     } catch (NumberFormatException e) {
       return false;
     }
+  }
+  
+  public boolean isOperator(String token) {
+    
+    return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/");
+    
   }
   
   
