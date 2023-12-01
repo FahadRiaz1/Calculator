@@ -55,5 +55,17 @@ class RevPolishCalcTest {
     assertEquals(2f, rpnCalc.evaluate("2"));
 
   }
+  
+  @Test
+  public void testComplexRpnExpression() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(63f, rpnCalc.evaluate("5 6 7 + * 2 -"));
+
+  }
+  
+  @Test
+  public void testComplexRpnExpressionOneMoreTimeWithDifferentExample() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(2f, rpnCalc.evaluate("3 4 + 2 * 7 /"));
+
+  }
 
 }
