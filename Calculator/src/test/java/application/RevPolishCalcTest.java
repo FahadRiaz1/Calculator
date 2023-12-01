@@ -49,5 +49,11 @@ class RevPolishCalcTest {
     assertThrows(IllegalArgumentException.class, () -> rpnCalc.evaluate("4 0 /"));
 
   }
+  
+  @Test
+  public void testSingleNumber() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(2f, rpnCalc.evaluate("2"));
+
+  }
 
 }
