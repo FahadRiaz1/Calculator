@@ -67,5 +67,14 @@ class RevPolishCalcTest {
     assertEquals(2f, rpnCalc.evaluate("3 4 + 2 * 7 /"));
 
   }
+  
+  @Test
+  public void testEvaluateMethodOnEmptyOrNullExpression() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertThrows(InvalidExpression.class, () -> {
+      rpnCalc.evaluate("");
+      rpnCalc.evaluate(null);
+    });
+
+  }
 
 }

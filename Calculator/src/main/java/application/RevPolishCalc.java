@@ -11,6 +11,12 @@ public class RevPolishCalc {
   
   
   public float evaluate(String rpnExpression)throws InvalidExpression, EmptyStackException, BadTypeException {
+    
+    if (rpnExpression == null || rpnExpression.trim().isEmpty()) {
+      throw new InvalidExpression("Expression is empty or null. ");
+    }
+    
+    
     String[] tokens = rpnExpression.split("\\s+");
     
     for (String token : tokens) {
