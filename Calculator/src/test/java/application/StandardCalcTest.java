@@ -50,6 +50,13 @@ class StandardCalcTest {
     assertThrows(IllegalArgumentException.class, () -> standardCalc.evaluate("4 / 0"));
 
   }
+  
+  @Test
+  public void testComplexInfixExpression()
+      throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(63f, standardCalc.evaluate("( 5 * ( 6 + 7 ) ) - 2"));
+
+  }
 
 
 
