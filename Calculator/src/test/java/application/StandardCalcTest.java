@@ -76,6 +76,16 @@ class StandardCalcTest {
 
   }
 
+  @Test
+  public void testEvaluateMethodOnInvalidToken()
+      throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertThrows(InvalidExpression.class, () -> {
+      standardCalc.evaluate("5 % 2");
+
+    });
+
+  }
+
 
 
 }
