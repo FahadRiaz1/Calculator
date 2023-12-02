@@ -62,5 +62,9 @@ public class OpStack {
     Entry entry = stack.top();
     return entry.getSymbol();
   }
+  
+  public boolean isEmpty() {
+    return stack.isEmpty();
+  }
 
 }
