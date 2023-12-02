@@ -66,6 +66,16 @@ class StandardCalcTest {
 
   }
 
+  @Test
+  public void testEvaluateMethodOnEmptyOrNullExpression()
+      throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertThrows(InvalidExpression.class, () -> {
+      standardCalc.evaluate("");
+      standardCalc.evaluate(null);
+    });
+
+  }
+
 
 
 }
