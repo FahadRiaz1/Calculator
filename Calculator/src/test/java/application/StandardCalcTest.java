@@ -31,6 +31,13 @@ class StandardCalcTest {
     assertEquals(1.0f, standardCalc.evaluate("6 - 5"));
 
   }
+  
+  @Test
+  public void testSimpleMultiplication()
+      throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(25.0f, standardCalc.evaluate("5 * 5"));
+
+  }
 
 
 
