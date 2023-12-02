@@ -12,4 +12,13 @@ public class StandardCalc {
     rpCalc = new RevPolishCalc();
   }
 
+  public float evaluate(String infixExpression)
+      throws InvalidExpression, EmptyStackException, BadTypeException {
+
+    String postfixExpression = convertToRPN(infixExpression);
+
+    return rpCalc.evaluate(postfixExpression);
+
+  }
+
 }

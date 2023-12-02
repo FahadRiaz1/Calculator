@@ -18,6 +18,12 @@ class StandardCalcTest {
     assertNotNull(standardCalc);
 
   }
+  
+  @Test
+  public void testSimpleAddition() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(11.0f, standardCalc.evaluate("5 + 6"));
+
+  }
 
 
 
