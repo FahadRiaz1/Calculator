@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class StandardCalcTest {
-  
+
   private StandardCalc standardCalc;
 
   @BeforeEach
@@ -18,7 +18,7 @@ class StandardCalcTest {
     assertNotNull(standardCalc);
 
   }
-  
+
   @Test
   public void testSimpleAddition() throws InvalidExpression, EmptyStackException, BadTypeException {
     assertEquals(11.0f, standardCalc.evaluate("5 + 6"));
