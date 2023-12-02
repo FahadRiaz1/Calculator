@@ -25,6 +25,13 @@ class StandardCalcTest {
 
   }
 
+  @Test
+  public void testSimpleSubtraction()
+      throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(1.0f, standardCalc.evaluate("6 - 5"));
+
+  }
+
 
 
 }
