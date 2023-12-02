@@ -38,6 +38,12 @@ class StandardCalcTest {
     assertEquals(25.0f, standardCalc.evaluate("5 * 5"));
 
   }
+  
+  @Test
+  public void testSimpleDivision() throws InvalidExpression, EmptyStackException, BadTypeException {
+    assertEquals(7.0f, standardCalc.evaluate("35 / 5"));
+
+  }
 
 
 
