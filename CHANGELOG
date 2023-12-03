@@ -10,3 +10,14 @@ v1.0.1: (Release 1)
 v1.1: (Release 1)
 
 + Implemented all the stacks that will work in the backend
+
+
+v2.0: (Release 2)
+
++ Reverse Polish (postfix) Calculator model/logic Implemented
++ Standard (infix) Calculator model/logic Implemented
++ Implemented the controller that works with view and model
++ Bug fixes
++ Integration and system tested the working Calculator 
+
+
