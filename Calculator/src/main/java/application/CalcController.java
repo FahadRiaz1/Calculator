@@ -12,9 +12,19 @@ public class CalcController {
   private void handleCalculation() {
     try {
       String expression = myView.getExpression();
-      float result = myModel.evaluate(expression, isInfix);
+      float result;
+
+      if (isInfix) {
+        StandardCalc standardCalc = new StandardCalc();
+        String rpnExpression = standardCalc.convertToRPN(expression);
+        result = myModel.evaluate(rpnExpression, false);
+      } else {
+        result = myModel.evaluate(expression, false);
+      }
+
       myView.setAnswer(String.valueOf(result));
-    } catch (Exception e) {
+
+    } catch (InvalidExpression | EmptyStackException | BadTypeException e) {
       myView.setAnswer("Error:  " + e.getMessage());
     }
   }

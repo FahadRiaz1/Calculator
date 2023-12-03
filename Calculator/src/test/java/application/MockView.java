@@ -1,7 +1,6 @@
 package application;
 
 import java.util.function.Consumer;
-import java.util.function.Function;
 
 public class MockView implements ViewInterface {
   private String expression;
