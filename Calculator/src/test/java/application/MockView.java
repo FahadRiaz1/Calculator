@@ -2,6 +2,8 @@ package application;
 
 import java.util.function.Consumer;
 
+// No javadoc comments in this class as it is a part of the test suite.
+
 public class MockView implements ViewInterface {
   private String expression;
   private String answer;
