@@ -24,7 +24,7 @@ public class CalcController {
 
       myView.setAnswer(String.valueOf(result));
 
-    } catch (InvalidExpression | EmptyStackException | BadTypeException e) {
+    } catch (InvalidExpression | EmptyStackException | BadTypeException | IllegalArgumentException e) {
       myView.setAnswer("Error:  " + e.getMessage());
     }
   }
