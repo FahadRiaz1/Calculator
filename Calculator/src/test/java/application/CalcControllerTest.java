@@ -32,4 +32,15 @@ class CalcControllerTest {
 
   }
 
+  @Test
+  public void testHandleTypeChangeMethod() {
+
+    view.triggerTypeChange(OpType.STANDARD);
+    assertTrue(controller.isInfix());
+
+    view.triggerTypeChange(OpType.REV_POLISH);
+    assertFalse(controller.isInfix());
+
+  }
+
 }

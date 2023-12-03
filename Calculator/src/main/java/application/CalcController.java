@@ -19,7 +19,13 @@ public class CalcController {
     }
   }
 
-  private void handleTypeChange() {}
+  private void handleTypeChange(OpType opType) {
+    isInfix = (opType == OpType.STANDARD);
+  }
+
+  public boolean isInfix() {
+    return isInfix;
+  }
 
   CalcController(CalcModel model, ViewInterface view) {
     this.myModel = model;
@@ -27,5 +33,6 @@ public class CalcController {
 
 
     this.myView.addCalculateObserver(this::handleCalculation);
+    this.myView.addTypeObserver(this::handleTypeChange);
   }
 }
