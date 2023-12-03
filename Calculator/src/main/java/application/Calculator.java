@@ -16,6 +16,9 @@ public interface Calculator {
    * @param infix how to evaluate the question: true means infix, false means reverse polish
    * @return the calculated value
    * @throws InvalidExpression when the expression cannot be evaluated
+   * @throws BadTypeException If there is a type mismatch
+   * @throws EmptyStackException If the operations are on an empty stack
    */
-  public float evaluate(String expression, Boolean infix) throws InvalidExpression;
+  public float evaluate(String expression, Boolean infix)
+      throws InvalidExpression, EmptyStackException, BadTypeException;
 }
