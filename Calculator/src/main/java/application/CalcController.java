@@ -20,15 +20,8 @@ public class CalcController {
   private void handleCalculation() {
     try {
       String expression = myView.getExpression();
-      float result;
-
-      if (isInfix) {
-        StandardCalc standardCalc = new StandardCalc();
-        String rpnExpression = standardCalc.convertToRPN(expression);
-        result = myModel.evaluate(rpnExpression, false);
-      } else {
-        result = myModel.evaluate(expression, false);
-      }
+      myModel.setInfix(isInfix);
+      float result = myModel.evaluate(expression);
 
       myView.setAnswer(String.valueOf(result));
 
