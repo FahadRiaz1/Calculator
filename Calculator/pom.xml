@@ -89,8 +89,9 @@
             </goals>
             <configuration>
               <excludes>
-                <exclude>application/*View.class</exclude>
-                <exclude>application/Driver.class</exclude>
+                <exclude>**/*View*</exclude>
+                <exclude>**/*Driver*</exclude>
+                <exclude>**/test/**/*</exclude>
               </excludes>
             </configuration>
           </execution>
