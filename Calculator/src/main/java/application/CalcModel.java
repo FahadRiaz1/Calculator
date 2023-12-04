@@ -5,17 +5,21 @@ package application;
  */
 public class CalcModel implements Calculator {
 
-  private StandardCalc standardCalc = new StandardCalc();
-  private RevPolishCalc revPolishCalc = new RevPolishCalc();
+  private boolean isInfix;
+
+  public CalcModel() {
+    isInfix = true;
+  }
+
+  public void setInfix(boolean isInfix) {
+    this.isInfix = isInfix;
+  }
 
   @Override
-  public float evaluate(String expression, Boolean infix)
+  public float evaluate(String expression)
       throws InvalidExpression, EmptyStackException, BadTypeException {
 
-    if (infix) {
-      return standardCalc.evaluate(expression);
-    } else {
-      return revPolishCalc.evaluate(expression);
-    }
+    Calculator calculator = CalculatorFactory.createCalculator(isInfix);
+    return calculator.evaluate(expression);
   }
 }
