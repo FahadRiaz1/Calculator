@@ -87,6 +87,12 @@
             <goals>
               <goal>prepare-agent</goal>
             </goals>
+            <configuration>
+              <excludes>
+                <exclude>application/*View.class</exclude>
+                <exclude>application/Driver.class</exclude>
+              </excludes>
+            </configuration>
           </execution>
           <!-- attached to Maven test phase -->
           <execution>
@@ -95,12 +101,6 @@
             <goals>
               <goal>report</goal>
             </goals>
-            <configuration>
-              <excludes>
-                <exclude>application/*View.java</exclude>
-                <exclude>application/Driver.java</exclude>
-              </excludes>
-            </configuration>
           </execution>
           <!-- Add this checking -->
           <execution>
