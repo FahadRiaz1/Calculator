@@ -7,7 +7,7 @@ package application;
  * @author Fahad Riaz
  * 
  */
-public class RevPolishCalc {
+public class RevPolishCalc implements Calculator {
 
   private NumStack numStack;
 
