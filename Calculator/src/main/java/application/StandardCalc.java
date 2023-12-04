@@ -7,7 +7,7 @@ package application;
  * @author Fahad Riaz
  * 
  */
-public class StandardCalc {
+public class StandardCalc implements Calculator {
 
   private OpStack opStack;
   private RevPolishCalc rpCalc;
