@@ -89,9 +89,8 @@
             </goals>
             <configuration>
               <excludes>
-                <exclude>**/*View*</exclude>
-                <exclude>**/*Driver*</exclude>
-                <exclude>**/test/**/*</exclude>
+                <exclude>application/Driver.class</exclude>
+                <exclude>application/CalcView.class</exclude>
               </excludes>
             </configuration>
           </execution>
@@ -102,6 +101,8 @@
             <goals>
               <goal>report</goal>
             </goals>
+
+
           </execution>
           <!-- Add this checking -->
           <execution>
