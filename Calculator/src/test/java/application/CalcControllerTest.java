@@ -19,6 +19,11 @@ class CalcControllerTest {
   }
 
   @Test
+  public void testControllerObjectCreation() {
+    assertNotNull(controller);
+  }
+
+  @Test
   public void testHandleCalculationMethod() {
 
     String testExpression = "2 + 2";
