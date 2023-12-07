@@ -3,63 +3,90 @@
 
 /* General Styles */
 .root {
-    -fx-background-color: #f0f0f0;
-    -fx-padding: 10px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #F0F3F4;
+    -fx-padding: 20px;
 }
 
-.button {
-    -fx-background-color: #4CAF50;
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-}
-
-.button:hover {
-    -fx-background-color: #45a049;
-}
-
-.label {
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-}
-
-/* Specific Styles */
+/* Text Fields */
 #inputField, #totalField {
-    -fx-font-size: 16px;
-    -fx-background-color: white;
-    -fx-border-color: #bfbfbf;
-    -fx-border-radius: 5px;
-    -fx-padding: 5px;
+    -fx-font-size: 18px;
+    -fx-border-color: #B0BEC5;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-background-color: #ffffff;
 }
 
+/* Buttons */
 #calcButton {
-    -fx-background-color: #2196F3;
+    -fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5);
     -fx-text-fill: white;
-    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
 }
 
 #calcButton:hover {
-    -fx-background-color: #1e88e5;
+    -fx-background-color: linear-gradient(to bottom, #1E88E5, #1565C0);
 }
 
-#revPolishCalculatorButton, #infixCalculatorButton {
-    -fx-background-color: #FFC107;
-    -fx-text-fill: black;
+.button {
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+/* Toggle Buttons */
+.toggle-button {
+    -fx-background-color: #ECEFF1;
+    -fx-text-fill: #455A64;
     -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 4px;
 }
 
-#revPolishCalculatorButton:selected, #infixCalculatorButton:selected {
-    -fx-background-color: #FF9800;
+.toggle-button:selected {
+    -fx-background-color: linear-gradient(to bottom, #FF7043, #F4511E);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.toggle-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FF7043, #F4511E);
     -fx-text-fill: white;
 }
 
+/* Labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #455A64;
+}
+
+/* FlowPane and ButtonBar */
 .flow-pane {
-    -fx-background-color: #e0e0e0;
+    -fx-background-color: transparent;
     -fx-padding: 10px;
-    -fx-border-radius: 5px;
-    -fx-border-color: #bfbfbf;
 }
 
 .button-bar {
     -fx-background-color: transparent;
+}
+
+/* Specific Styles for Toggle Buttons within the ButtonBar */
+.button-bar > .container > .toggle-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.button-bar > .container > .toggle-button:selected {
+    -fx-background-color: linear-gradient(to bottom, #FF7043, #F4511E);
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
 }
