@@ -5,9 +5,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class StrStackTest {
-  
-private StrStack strStack;
-  
+
+  private StrStack strStack;
+
   @BeforeEach
   public void setUp() {
     strStack = new StrStack();
@@ -20,20 +20,20 @@ private StrStack strStack;
     assertNotNull(strStack);
 
   }
-  
+
   @Test
   public void strStackShouldHaveSizeZeroUponInitialization() {
     assertEquals(0, strStack.size());
 
   }
-  
+
   @Test
   public void strStackSizeShouldIncreaseByOneAfterSinglePush() {
     strStack.push("test");
     assertEquals(1, strStack.size());
 
   }
-  
+
   @Test
   public void strStackSizeShouldIncreaseByTwoAfterTwoPushes() {
 
@@ -42,9 +42,10 @@ private StrStack strStack;
 
     assertEquals(2, strStack.size());
   }
-  
+
   @Test
-  public void strStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedString() throws EmptyStackException, BadTypeException {
+  public void strStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedString()
+      throws EmptyStackException, BadTypeException {
     strStack.push("testing");
     assertEquals(1, strStack.size());
 
@@ -52,7 +53,7 @@ private StrStack strStack;
     assertEquals(0, strStack.size());
     assertEquals("testing", poppedString);
   }
-  
+
   @Test
   public void popShouldReturnAndRemoveTopEntry() throws EmptyStackException, BadTypeException {
     strStack.push("hello");
@@ -65,9 +66,10 @@ private StrStack strStack;
     assertEquals(1, strStack.size());
     assertEquals("hi", topString);
   }
-  
+
   @Test
-  public void topShouldReturnTopEntryWithoutRemovingIt() throws EmptyStackException, BadTypeException {
+  public void topShouldReturnTopEntryWithoutRemovingIt()
+      throws EmptyStackException, BadTypeException {
     strStack.push("1");
     strStack.push("2");
 
@@ -76,9 +78,10 @@ private StrStack strStack;
     assertEquals(2, strStack.size());
 
   }
-  
+
   @Test
-  public void strStackShouldHandleManyPushesAndPopsSuccessfully() throws EmptyStackException, BadTypeException {
+  public void strStackShouldHandleManyPushesAndPopsSuccessfully()
+      throws EmptyStackException, BadTypeException {
     final int totalEntries = 10000;
 
     for (int i = 0; i < totalEntries; i++) {
@@ -92,6 +95,6 @@ private StrStack strStack;
     assertEquals(0, strStack.size());
   }
 
- 
+
 
 }

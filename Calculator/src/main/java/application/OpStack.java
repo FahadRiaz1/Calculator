@@ -9,9 +9,9 @@ package application;
  * @author Fahad Riaz
  */
 public class OpStack {
-  
+
   private Stack stack;
-  
+
   /**
    * Initialises a new empty opstack.
    * 
@@ -19,7 +19,7 @@ public class OpStack {
   public OpStack() {
     this.stack = new Stack();
   }
-  
+
   /**
    * Returns the number of entries in the opstack.
    * 
@@ -28,7 +28,7 @@ public class OpStack {
   public int size() {
     return stack.size();
   }
-  
+
   /**
    * Pushes a new symbol into the opstack.
    * 
@@ -36,9 +36,9 @@ public class OpStack {
    */
   public void push(Symbol symbol) {
     stack.push(new Entry(symbol));
-    
+
   }
-  
+
   /**
    * Pops the top symbol off the opstack.
    * 
@@ -49,11 +49,12 @@ public class OpStack {
   public Symbol pop() throws EmptyStackException, BadTypeException {
     Entry entry = stack.pop();
     return entry.getSymbol();
-    
+
   }
-  
+
   /**
    * Retrieves the top symbol value of the opstack.
+   * 
    * @return the top symbol of opstack
    * @throws BadTypeException if the opstack has a bad type
    * @throws EmptyStackException if the opstack is empty
@@ -62,7 +63,7 @@ public class OpStack {
     Entry entry = stack.top();
     return entry.getSymbol();
   }
-  
+
   public boolean isEmpty() {
     return stack.isEmpty();
   }

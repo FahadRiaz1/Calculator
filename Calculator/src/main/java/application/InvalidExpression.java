@@ -7,14 +7,14 @@ package application;
  */
 
 public class InvalidExpression extends Exception {
-  //This line was automatically added after autofix due to checkstyle error.
+  // This line was automatically added after autofix due to checkstyle error.
   private static final long serialVersionUID = 1L;
 
   /**
-  * Constructs a new InvalidExpression exception with the specified detail message.
-  * 
-  * @param message The detail message
-  */
+   * Constructs a new InvalidExpression exception with the specified detail message.
+   * 
+   * @param message The detail message
+   */
   public InvalidExpression(String message) {
     super(message);
   }

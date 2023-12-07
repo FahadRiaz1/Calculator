@@ -5,9 +5,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class NumStackTest {
-  
+
   private NumStack numStack;
-  
+
   @BeforeEach
   public void setUp() {
     numStack = new NumStack();
@@ -26,14 +26,14 @@ class NumStackTest {
     assertEquals(0, numStack.size());
 
   }
-  
+
   @Test
   public void numStackSizeShouldIncreaseByOneAfterSinglePush() {
     numStack.push(5.5f);
     assertEquals(1, numStack.size());
 
   }
-  
+
   @Test
   public void numStackSizeShouldIncreaseByTwoAfterTwoPushes() {
 
@@ -42,9 +42,10 @@ class NumStackTest {
 
     assertEquals(2, numStack.size());
   }
-  
+
   @Test
-  public void numStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedNumber() throws EmptyStackException, BadTypeException {
+  public void numStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedNumber()
+      throws EmptyStackException, BadTypeException {
     numStack.push(100.567f);
     assertEquals(1, numStack.size());
 
@@ -52,7 +53,7 @@ class NumStackTest {
     assertEquals(0, numStack.size());
     assertEquals(100.567f, poppedValue);
   }
-  
+
   @Test
   public void popShouldReturnAndRemoveTopEntry() throws EmptyStackException, BadTypeException {
     numStack.push(5.5f);
@@ -65,7 +66,7 @@ class NumStackTest {
     assertEquals(1, numStack.size());
     assertEquals(3.5f, topValue);
   }
-  
+
   @Test
   public void testPopMethodOnEmptyNumStack() {
     assertEquals(0, numStack.size());
@@ -73,9 +74,10 @@ class NumStackTest {
       numStack.pop();
     });
   }
-  
+
   @Test
-  public void topShouldReturnTopEntryWithoutRemovingIt() throws EmptyStackException, BadTypeException {
+  public void topShouldReturnTopEntryWithoutRemovingIt()
+      throws EmptyStackException, BadTypeException {
     numStack.push(1.5f);
     numStack.push(5.3f);
 
@@ -84,7 +86,7 @@ class NumStackTest {
     assertEquals(2, numStack.size());
 
   }
-  
+
   @Test
   public void testTopMethodOnEmptyStack() {
     assertEquals(0, numStack.size());
@@ -93,9 +95,10 @@ class NumStackTest {
     });
 
   }
-  
+
   @Test
-  public void numStackShouldHandleManyPushesAndPopsSuccessfully() throws EmptyStackException, BadTypeException {
+  public void numStackShouldHandleManyPushesAndPopsSuccessfully()
+      throws EmptyStackException, BadTypeException {
     final int totalEntries = 10000;
 
     for (int i = 0; i < totalEntries; i++) {
@@ -108,6 +111,6 @@ class NumStackTest {
     }
     assertEquals(0, numStack.size());
   }
-  
+
 
 }

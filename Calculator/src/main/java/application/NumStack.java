@@ -8,9 +8,9 @@ package application;
  * @author Fahad Riaz
  */
 public class NumStack {
-  
+
   private Stack stack;
-  
+
   /**
    * Initialises a new empty numeric stack.
    * 
@@ -18,7 +18,7 @@ public class NumStack {
   public NumStack() {
     this.stack = new Stack();
   }
-  
+
   /**
    * Returns the number of entries in the numeric stack.
    * 
@@ -27,7 +27,7 @@ public class NumStack {
   public int size() {
     return stack.size();
   }
-  
+
   /**
    * Pushes a new float into the numeric stack.
    * 
@@ -35,9 +35,9 @@ public class NumStack {
    */
   public void push(float number) {
     stack.push(new Entry(number));
-    
+
   }
-  
+
   /**
    * Pops the top float off the numeric stack.
    * 
@@ -48,11 +48,12 @@ public class NumStack {
   public float pop() throws EmptyStackException, BadTypeException {
     Entry entry = stack.pop();
     return entry.getNumber();
-    
+
   }
-  
+
   /**
    * Retrieves the top float value of the numeric stack.
+   * 
    * @return the top float of numeric stack
    * @throws BadTypeException if the numeric stack has a bad type
    * @throws EmptyStackException if the numeric stack is empty

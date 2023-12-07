@@ -8,9 +8,9 @@ package application;
  * @author Fahad Riaz
  */
 public class StrStack {
-  
+
   private Stack stack;
-  
+
   /**
    * Initialises a new empty strStack.
    * 
@@ -18,7 +18,7 @@ public class StrStack {
   public StrStack() {
     this.stack = new Stack();
   }
-  
+
   /**
    * Returns the number of entries in the strStack.
    * 
@@ -27,7 +27,7 @@ public class StrStack {
   public int size() {
     return stack.size();
   }
-  
+
   /**
    * Pushes a new string into the strStack.
    * 
@@ -35,9 +35,9 @@ public class StrStack {
    */
   public void push(String string) {
     stack.push(new Entry(string));
-    
+
   }
-  
+
   /**
    * Pops the top string value off the strStack.
    * 
@@ -48,11 +48,12 @@ public class StrStack {
   public String pop() throws EmptyStackException, BadTypeException {
     Entry entry = stack.pop();
     return entry.getString();
-    
+
   }
-  
+
   /**
    * Retrieves the top string value of the strStack.
+   * 
    * @return the top string of strStack
    * @throws BadTypeException if the strStack has a bad type
    * @throws EmptyStackException if the strStack is empty

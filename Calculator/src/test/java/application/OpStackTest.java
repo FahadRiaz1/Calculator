@@ -5,9 +5,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class OpStackTest {
-  
-private OpStack opStack;
-  
+
+  private OpStack opStack;
+
   @BeforeEach
   public void setUp() {
     opStack = new OpStack();
@@ -20,20 +20,20 @@ private OpStack opStack;
     assertNotNull(opStack);
 
   }
-  
+
   @Test
   public void opStackShouldHaveSizeZeroUponInitialization() {
     assertEquals(0, opStack.size());
 
   }
-  
+
   @Test
   public void opStackSizeShouldIncreaseByOneAfterSinglePush() {
     opStack.push(Symbol.PLUS);
     assertEquals(1, opStack.size());
 
   }
-  
+
   @Test
   public void opStackSizeShouldIncreaseByTwoAfterTwoPushes() {
 
@@ -42,9 +42,10 @@ private OpStack opStack;
 
     assertEquals(2, opStack.size());
   }
-  
+
   @Test
-  public void opStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedSymbol() throws EmptyStackException, BadTypeException {
+  public void opStackSizeShouldDecreaseByOneAfterPopAndPopShouldReturnThePushedSymbol()
+      throws EmptyStackException, BadTypeException {
     opStack.push(Symbol.MINUS);
     assertEquals(1, opStack.size());
 
@@ -52,7 +53,7 @@ private OpStack opStack;
     assertEquals(0, opStack.size());
     assertEquals(Symbol.MINUS, poppedSymbol);
   }
-  
+
   @Test
   public void popShouldReturnAndRemoveTopEntry() throws EmptyStackException, BadTypeException {
     opStack.push(Symbol.DIVIDE);
@@ -65,7 +66,7 @@ private OpStack opStack;
     assertEquals(1, opStack.size());
     assertEquals(Symbol.LEFT_BRACKET, topSymbol);
   }
-  
+
   @Test
   public void testPopMethodOnEmptyOpStack() {
     assertEquals(0, opStack.size());
@@ -73,9 +74,10 @@ private OpStack opStack;
       opStack.pop();
     });
   }
-  
+
   @Test
-  public void topShouldReturnTopEntryWithoutRemovingIt() throws EmptyStackException, BadTypeException {
+  public void topShouldReturnTopEntryWithoutRemovingIt()
+      throws EmptyStackException, BadTypeException {
     opStack.push(Symbol.DIVIDE);
     opStack.push(Symbol.RIGHT_BRACKET);
 
@@ -84,7 +86,7 @@ private OpStack opStack;
     assertEquals(2, opStack.size());
 
   }
-  
+
   @Test
   public void testTopMethodOnEmptyOpStack() {
     assertEquals(0, opStack.size());
@@ -93,9 +95,10 @@ private OpStack opStack;
     });
 
   }
-  
+
   @Test
-  public void opStackShouldHandleManyPushesAndPopsSuccessfully() throws EmptyStackException, BadTypeException {
+  public void opStackShouldHandleManyPushesAndPopsSuccessfully()
+      throws EmptyStackException, BadTypeException {
     final int totalEntries = 10000;
 
     for (int i = 0; i < totalEntries; i++) {
