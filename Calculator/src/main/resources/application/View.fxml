@@ -39,12 +39,12 @@
          
             <ButtonBar prefHeight="40.0">
               <buttons>
-                  <ToggleButton fx:id="revPolishCalculatorButton" alignment="CENTER_LEFT" contentDisplay="CENTER" mnemonicParsing="false" selected="true" text="Reverse Polish">
+                  <ToggleButton fx:id="revPolishCalculatorButton" alignment="CENTER_LEFT" contentDisplay="CENTER" mnemonicParsing="false" text="Reverse Polish">
                      <toggleGroup>
                         <ToggleGroup fx:id="type" />
                      </toggleGroup>
                   </ToggleButton>
-                  <ToggleButton fx:id="infixCalculatorButton" disable="true" mnemonicParsing="false" text="Standard" toggleGroup="$type" />
+                  <ToggleButton fx:id="infixCalculatorButton" disable="true" selected="true" mnemonicParsing="false" text="Standard" toggleGroup="$type" />
               </buttons>
             </ButtonBar>
          </children>
