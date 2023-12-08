@@ -21,3 +21,13 @@ v2.0: (Release 2)
 + Integration and system tested the working Calculator 
 
 
+v3.0: (Release 3) (System tested)
+
++ Further improved the GUI to make it more attractive and responsive
++ a few bugs Fixed
+- Removed ascii view 
++ Integrated the factory design pattern to encapsulate instantiation logic at backend
+
+
+
+
